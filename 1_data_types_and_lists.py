@@ -65,3 +65,29 @@ list5 # output: [0, 1, 2, 3, 4]
 s1 = Series(list4)
 s2 = Series(list5)
 
+## lists to DataFrame...think of DataFrame like matrix and list like vector
+list6 = [1, 2, 3, 4, 5]
+list7 = [2, 3, 4, 5, 6]
+zip(list6, list7) # out: [(1, 2), (2, 3), (3, 4), (4, 5), (5, 6)]
+list8 = ['a', 'b', 'c', 'd', 'e']
+zip1 = zip(list6, list8, list7)
+
+df1 = DataFrame(zip1) # creates matrix
+
+df2 = DataFrame(zip1, columns = ['one', 'two', 'three'])
+
+df2['one'] # outputs the labeled column of the DataFrame only.
+
+## Getting a subset of a DataFrame
+df2[['two', 'three']][3:5] # gets rows labeled as two and three, and returns their values from row 3 and 4.
+
+## makedataframe using dict notation
+
+df3 = DataFrame({ 'one' : list6, 9 : list7})
+
+
+
+
+
+
+
